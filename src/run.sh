@@ -6,3 +6,7 @@ for path in `ls -1 | grep .sql | sort`; do
 	sqlite3 < $path
 done
 
+./auto_rollback_unique_error.sh
+./auto_rollback_syntax_error.sh
+rm -f a.db
+
